@@ -37,7 +37,7 @@ const defaultOptions = {
     characteristic: 0,
     forceAverage: false,
     average: false,
-    mantissa: -1,
+    mantissa: 0,
     optionalMantissa: true,
     thousandSeparated: false,
     spaceSeparated: false,

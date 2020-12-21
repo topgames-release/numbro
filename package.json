@@ -1,12 +1,12 @@
 {
-  "name": "numbro",
+  "name": "@topgames/numbro",
   "version": "2.1.0",
   "description": "Format and manipulate numbers.",
   "homepage": "http://numbrojs.com",
   "author": {
-    "name": "Benjamin Van Ryseghem",
-    "email": "benjamin@vanryseghem.com",
-    "url": "https://benjamin.vanryseghem.com"
+    "name": "Ying Wang",
+    "email": "upcwangying@126.com",
+    "url": "https://upcwangying.com"
   },
   "keywords": [
     "numeral",
@@ -24,10 +24,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/BenjaminVanRyseghem/numbro"
+    "url": "https://github.com/topgames-release/numbro"
   },
   "bugs": {
-    "url": "https://github.com/BenjaminVanRyseghem/numbro/issues"
+    "url": "https://github.com/topgames-release/numbro/issues"
   },
   "license": "MIT",
   "devDependencies": {
@@ -87,5 +87,8 @@
   ],
   "dependencies": {
     "bignumber.js": "^4.0.4"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
