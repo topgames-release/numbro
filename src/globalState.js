@@ -120,6 +120,14 @@ state.currentByteDefaultFormat = () => Object.assign({}, state.currentDefaults()
 state.currentPercentageDefaultFormat = () => Object.assign({}, state.currentDefaults(), currentLanguageData().percentageFormat);
 
 /**
+ * Return the percentage default-format.
+ * Use first uses the current language percentage default, then fallback to the regular defaults.
+ *
+ * @return {{}}
+ */
+state.currentThousandthsDefaultFormat = () => Object.assign({}, state.currentDefaults(), currentLanguageData().thousandthsFormat);
+
+/**
  * Return the currency default-format.
  * Use first uses the current language currency default, then fallback to the regular defaults.
  *

@@ -72,6 +72,11 @@ function parseOutput(string, result) {
         return;
     }
 
+    if (string.indexOf("‰") !== -1) {
+        result.output = "thousandths";
+        return;
+    }
+
     if (string.indexOf("bd") !== -1) {
         result.output = "byte";
         result.base = "general";

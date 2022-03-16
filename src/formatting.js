@@ -92,6 +92,10 @@ function formatNumbro(instance, providedFormat, numbro) {
             providedFormat = formatOrDefault(providedFormat, globalState.currentPercentageDefaultFormat());
             return formatPercentage(instance, providedFormat, globalState, numbro);
         }
+        case "thousandths": {
+            providedFormat = formatOrDefault(providedFormat, globalState.currentThousandthsDefaultFormat());
+            return formatThousandths(instance, providedFormat, globalState, numbro);
+        }
         case "byte":
             providedFormat = formatOrDefault(providedFormat, globalState.currentByteDefaultFormat());
             return formatByte(instance, providedFormat, globalState, numbro);
@@ -267,6 +271,33 @@ function formatPercentage(instance, providedFormat, state, numbro) {
     }
 
     return `${output}${options.spaceSeparated ? " " : ""}%`;
+}
+
+/**
+ * Format the provided INSTANCE as a percentage using the PROVIDEDFORMAT,
+ * and the STATE.
+ *
+ * @param {Numbro} instance - numbro instance to format
+ * @param {{}} providedFormat - specification for formatting
+ * @param {globalState} state - shared state of the library
+ * @param numbro - the numbro singleton
+ * @return {string}
+ */
+function formatThousandths(instance, providedFormat, state, numbro) {
+    let prefixSymbol = providedFormat.prefixSymbol;
+
+    let output = formatNumber({
+        instance: numbro(instance._value * 1000),
+        providedFormat,
+        state
+    });
+    let options = Object.assign({}, defaultOptions, providedFormat);
+
+    if (prefixSymbol) {
+        return `‰${options.spaceSeparated ? " " : ""}${output}`;
+    }
+
+    return `${output}${options.spaceSeparated ? " " : ""}‰`;
 }
 
 /**

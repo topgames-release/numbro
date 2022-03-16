@@ -28,6 +28,7 @@ const bcp47RegExp = /^[a-z]{2,3}(-[a-zA-Z]{4})?(-([A-Z]{2}|[0-9]{3}))?$/;
 const validOutputValues = [
     "currency",
     "percent",
+    "thousandths",
     "byte",
     "time",
     "ordinal",
@@ -196,6 +197,7 @@ const validLanguage = {
     ordinalFormat: "format",
     byteFormat: "format",
     percentageFormat: "format",
+    thousandthsFormat: "format",
     currencyFormat: "format",
     timeDefaults: "format",
     formats: {
