@@ -76,7 +76,7 @@ declare namespace numbro {
         forceSign?: boolean;
         totalLength?: number;
         spaceSeparated?: boolean;
-        output?: "currency" | "percent" | "byte" | "time" | "ordinal" | "number";
+        output?: "currency" | "percent" | "thousandths" | "byte" | "time" | "ordinal" | "number";
     }
 
     export interface NumbroLanguage {
